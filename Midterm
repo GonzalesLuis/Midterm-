@@ -19,10 +19,15 @@ public class Account {
 
      void setBalance(double balance){
          this.balance = balance;
+         
+        if (balance >= amountDue){
+            balance -= amountDue;
+            System.out.println("Credit has been successfully deducted from account.");
+         } 
      }
 
      
-     void debit(double amount){
+     void debit(double amount) {
         if (amount <= balance){
             this.balance -= amount;
             System.out.println(amount + " successfully deducted from account.");
@@ -33,11 +38,21 @@ public class Account {
         }
     }
 
+     void credit(double amount){
+         
+        amountDue += amount;
+         
+        System.out.println("Amount added to credit");
+
+         
+     }
+
      
     
      public void print(){
-        System.out.println("A/C no: " + accountNumber + " Balance = $" + balance);
+        System.out.println("A/C no: " + accountNumber + " Balance: $" + balance);
     }
+
 
 public static void main(String[] args){
          Account acct1 = new Account(1, 1000); 
