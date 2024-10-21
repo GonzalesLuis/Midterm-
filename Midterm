@@ -10,11 +10,11 @@ public class Account {
           }
      
      int getAccountNumber(){
-         return accountNumber;
+         return this.accountNumber;
     }
 
     double getBalance(){
-         return balance;
+         return this.balance;
      }
 
      void setBalance(double balance){
@@ -25,7 +25,9 @@ public class Account {
         this.balance -= amount;
     }
     
-     
+     public void print(){
+        System.out.println("A/C no: " + accountNumber + " Balance = $" + balance);
+    }
 
     
 }
