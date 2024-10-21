@@ -54,21 +54,20 @@ public class Account {
     }
 
 
-public static void main(String[] args){
+     public static void main(String[] args){
          Account acct1 = new Account(1, 1000); 
          acct1.setBalance(2000);
          acct1.debit(731);
          
-         System.out.println("Account: " + acct1.getAccountNumber());
-         System.out.println("Balance: " + acct1.getBalance());
+         acct1.print();
          
          Account acct2 = new Account(2, 0); 
          acct2.setBalance(3451);
          acct2.credit(1233);
          
          
-         System.out.println("\n\nAccount: " + acct2.getAccountNumber());
-         System.out.println("Balance: " + acct2.getBalance());
+         System.out.print("\n\nA/C no: " + acct2.getAccountNumber());
+         System.out.println(" Balance = $" + acct2.getBalance());
          
      }
 
