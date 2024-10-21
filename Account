@@ -1,0 +1,71 @@
+package midterm.exam;
+
+public class Account {
+     int accountNumber;
+     double balance = 0.0;
+     
+     
+     Account (int accountNumber, double balance){
+           this.accountNumber = accountNumber;
+           this.balance = balance;
+           
+           System.out.println("Account successfully created.");
+  
+          }
+     
+     int getAccountNumber(){
+         return this.accountNumber;
+    }
+
+    double getBalance(){
+         return this.balance;
+     }
+
+     void setBalance(double balance){
+         this.balance = balance;
+         
+        if (balance >= amountDue && amountDue != 0){
+            balance -= amountDue;
+            System.out.println("Credit has been successfully deducted from account.");
+         } 
+     }
+
+     
+     void debit(double amount) {
+        if (amount <= balance){
+            this.balance -= amount;
+            System.out.println(amount + " successfully deducted from account.");
+            System.out.println("Current balance: " + balance);
+        } else {
+            System.out.println("Card declined. Insufficient value.");
+            System.out.println("Current balance: " + balance);
+        }
+    }
+
+    double amountDue;
+     
+     void credit(double amount){
+         
+        amountDue += amount;
+         
+        System.out.println("Amount added to credit");
+
+         
+     }
+
+     public void print(){
+        System.out.println("A/C no: " + accountNumber + "\nBalance: $" + balance);
+    }
+
+  
+
+
+    
+
+    
+}
+
+
+
+
+ 
