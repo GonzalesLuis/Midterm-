@@ -1,5 +1,8 @@
 //Midterm code
 
+    public int getAccountNumber(){
+        return this.accountNumber;
+    }
     public int getBalance(){
         return this.balance;
     }
