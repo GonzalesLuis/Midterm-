@@ -35,10 +35,10 @@ public class Account {
         if (amount <= balance){
             this.balance -= amount;
             System.out.println(amount + " successfully deducted from account.");
-            System.out.println("Current balance: " + balance);
+            System.out.println("Current balance: $" + balance);
         } else {
             System.out.println("Card declined. Insufficient value.");
-            System.out.println("Current balance: " + balance);
+            System.out.println("Current balance: $" + balance);
         }
     }
 
