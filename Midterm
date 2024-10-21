@@ -1,12 +1,30 @@
-//Midterm code
+package midterm.exam;
 
-    public int getAccountNumber(){
-        return this.accountNumber;
+public class Account {
+     int accountNumber;
+     double balance = 0.0;
+     
+     Account (int accountNumber, double balance){
+           this.accountNumber = accountNumber;
+           this.balance = balance;
+          }
+     
+     int getAccountNumber(){
+         return accountNumber;
     }
-    public int getBalance(){
+
+   public int getBalance(){
         return this.balance;
     }
     
     public void setBalance(double balance){
         this.balance = balance;
     }
+    
+     
+
+    
+}
+
+
+ 
