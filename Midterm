@@ -21,9 +21,19 @@ public class Account {
          this.balance = balance;
      }
 
-    public void debit(double amount){
-        this.balance -= amount;
+     
+     void debit(double amount){
+        if (amount <= balance){
+            this.balance -= amount;
+            System.out.println(amount + " successfully deducted from account.");
+            System.out.println("Current balance: " + balance);
+        } else {
+            System.out.println("Card declined. Insufficient value.");
+            System.out.println("Current balance: " + balance);
+        }
     }
+
+     
     
      public void print(){
         System.out.println("A/C no: " + accountNumber + " Balance = $" + balance);
