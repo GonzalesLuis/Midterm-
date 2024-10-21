@@ -3,14 +3,11 @@ package midterm.exam;
 public class Account {
      int accountNumber;
      double balance = 0.0;
-     
+     double amountDue = 0.0;
      
      Account (int accountNumber, double balance){
            this.accountNumber = accountNumber;
            this.balance = balance;
-           
-           System.out.println("Account successfully created.");
-  
           }
      
      int getAccountNumber(){
@@ -23,8 +20,9 @@ public class Account {
 
      void setBalance(double balance){
          this.balance = balance;
+         System.out.println("New Balance = $" + this.balance);
          
-        if (balance >= amountDue && amountDue != 0){
+        if (amountDue != 0 && balance >= amountDue){
             this.balance -= amountDue;
             System.out.println("Credit has been successfully deducted from account.");
          } 
@@ -35,15 +33,13 @@ public class Account {
         if (amount <= balance){
             this.balance -= amount;
             System.out.println(amount + " successfully deducted from account.");
-            System.out.println("Current balance: $" + balance);
+            System.out.println("Current balance: " + balance);
         } else {
             System.out.println("Card declined. Insufficient value.");
-            System.out.println("Current balance: $" + balance);
+            System.out.println("Current balance: " + balance);
         }
     }
 
-    double amountDue;
-     
      void credit(double amount){
          
         amountDue += amount;
@@ -53,16 +49,12 @@ public class Account {
          
      }
 
+     
+    
      public void print(){
-        System.out.println("A/C no: " + accountNumber + "\nBalance: $" + balance);
+        System.out.println("\n\nA/C no: " + accountNumber + " Balance = $" + balance);
     }
 
-  
-
-
-    
-
-    
 }
 
 
