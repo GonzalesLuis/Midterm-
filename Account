@@ -25,7 +25,7 @@ public class Account {
          this.balance = balance;
          
         if (balance >= amountDue && amountDue != 0){
-            balance -= amountDue;
+            this.balance -= amountDue;
             System.out.println("Credit has been successfully deducted from account.");
          } 
      }
